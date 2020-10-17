@@ -958,10 +958,11 @@ process profileFunction {
 	and removes them.
 */
 
+
 process logQC {
 
 	input:
-	file(tolog)  from logQC.flatMap().mix(log2, log3, log5).toSortedList( { a, b -> a.name <=> b.name } )
+	file(tolog) from logQC.flatMap().mix(log2, log3, log5).toSortedList( { a, b -> a.name <=> b.name } )
 
 	when:
 	params.mode == "QC" || params.mode == "complete"
@@ -971,6 +972,7 @@ process logQC {
 	cat $tolog >> $mylog
 	"""
 }
+
 
 /**
 	CLEANUP 2. Saves the temporary files generate during QC (if the users requested so)
@@ -1011,7 +1013,7 @@ process logCC {
 		
 	script:
 	"""
-	cat $tolog >> $mylog
+        cat $tolog >> $mylog
 	"""
 }
 
