@@ -622,7 +622,7 @@ toQC = rawreads.mix(trimmedreads2qc, decontaminatedreads2qc)
 //Process performing all the Quality Assessment
 process qualityAssessment {
 	
-	publishDir  workingdir, mode: 'copy', pattern: "*.{html,txt}"
+	publishDir  workingdir, mode: 'copy', pattern: "*.{html,txt,zip}"
 	  	
 	input:
    	set val(step), file(reads), val(label), val(stem) from toQC
@@ -631,7 +631,8 @@ process qualityAssessment {
 	file ".log.$step$label" into logQC
 	file "${params.prefix}*_fastqc.html" 
 	file "${params.prefix}*_fastqc_data.txt" 
-
+	file "${params.prefix}*_fastqc.zip" 
+    
 	when:
 	params.mode == "QC" || params.mode == "complete"
 
