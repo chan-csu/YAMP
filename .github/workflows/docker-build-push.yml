@@ -34,7 +34,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./yampdocker/
-          file: ./Dockerfile
+          file: ./yampdocker/Dockerfile
           push: true
           tags: chancsu/yampdocker:latest
       
