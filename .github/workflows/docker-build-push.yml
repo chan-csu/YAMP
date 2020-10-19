@@ -36,5 +36,6 @@ jobs:
           context: ./yampdocker/
           file: ./yampdocker/Dockerfile
           push: true
+          cache-from: type=registry,ref=alesssia/yampdocker:latest
           tags: chancsu/yampdocker:latest
       
