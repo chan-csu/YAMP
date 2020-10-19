@@ -20,3 +20,9 @@ RUN conda update conda -y
 RUN conda install -c bioconda -y bbmap=37.10 fastqc=0.11.5 metaphlan2=2.6.0 qiime=1.9.1 humann2=0.9.9 
 RUN conda install -c conda-forge -y awscli
 RUN conda clean --tarballs -y
+
+#add in bin scripts from repo
+RUN apk --update add --no-cache git
+RUN git clone https://github.com/chan-csu/YAMP.git
+ENV PATH="YAMP/bin:${PATH}"
+
