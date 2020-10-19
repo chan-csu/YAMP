@@ -24,5 +24,5 @@ RUN conda clean --tarballs -y
 #add in bin scripts from repo
 RUN apk --update add --no-cache git
 RUN git clone https://github.com/chan-csu/YAMP.git
-ENV PATH="YAMP/bin:${PATH}"
+ENV PATH="/YAMP/bin:${PATH}"
 
