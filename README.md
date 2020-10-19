@@ -1,5 +1,7 @@
 # Yet Another Metagenomic Pipeline (YAMP)
 
+![Publish Docker image](https://github.com/chan-csu/YAMP/workflows/Publish%20Docker%20image/badge.svg)
+
 Thanks to the increased cost-effectiveness of high-throughput technologies, the number of studies focusing on microorganisms (bacteria, archaea, microbial eukaryotes, fungi, and viruses) and on their connections with human health and diseases has surged, and, consequently, a plethora of approaches and software has been made available for their study, making it difficult to select the best methods and tools. 
 
 Here we present Yet Another Metagenomic Pipeline (YAMP) that, starting from the raw sequencing data and having a strong focus on quality control, allows, within hours, the data processing up to the functional annotation (please refer to the YAMP [wiki](https://github.com/alesssia/YAMP/wiki) for more information).

@@ -36,5 +36,5 @@ jobs:
           context: ./yampdocker/
           file: ./Dockerfile
           push: true
-          tags: chancsu/yampdocker:latest, chancsu/yampdocker:$(date +%s)
+          tags: chancsu/yampdocker:latest
       
